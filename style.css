@@ -1,0 +1,397 @@
+/* =========================
+   EXISTING LOGIN PAGE CSS
+   ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Full-bleed background image */
+.container-main {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* LEFT IMAGE fills the entire background */
+.left-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.illustration {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Purple overlay on top of the image */
+.left-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(80, 30, 180, 0.45);
+}
+
+/* RIGHT LOGIN SECTION — floats over the image */
+.right-section {
+  position: relative;
+  z-index: 1;
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 40px;
+}
+
+/* LOGIN CARD */
+.login-card {
+  width: 380px;
+  padding: 48px 40px;
+  border-radius: 20px;
+  background: rgba(70, 30, 160, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: left;
+}
+
+/* TITLE */
+.login-card h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: white;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* SUBTITLE */
+.login-card p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 32px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* INPUT FIELDS */
+.login-card input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-card input::placeholder {
+  color: #999;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* LOGIN BUTTON */
+.custom-btn {
+  background: #7c3aed;
+  border: none;
+  color: white;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.custom-btn:hover {
+  background: #6d28d9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .right-section {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+/* =========================
+   OTHER PAGE DESIGNS
+   ========================= */
+
+/* General app background */
+.app-body {
+  background: #111827;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Dashboard cards */
+.card-box {
+  background: #1f2937;
+  border-radius: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+/* Emoji Mood Section */
+.emoji-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.emoji {
+  font-size: 35px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.emoji:hover {
+  background: #8b5cf6;
+  transform: scale(1.2);
+}
+
+.selected {
+  background: #8b5cf6;
+}
+
+/* Streak Section */
+.streak-days {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.streak-days div {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #374151;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.active-day {
+  background: #8b5cf6 !important;
+}
+
+.today-day {
+  background: #f472b6 !important;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #1f2937;
+
+  display: flex;
+  justify-content: space-around;
+
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.bottom-nav a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.bottom-nav a:hover {
+  color: #c4b5fd;
+}
+
+.bottom-nav i {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+/* Journal Page */
+.journal-area {
+  width: 100%;
+  min-height: 200px;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  resize: none;
+  outline: none;
+}
+
+/* Mood Tags */
+.tag {
+  padding: 8px 15px;
+  border-radius: 20px;
+  margin-right: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.happy {
+  background: #22c55e;
+}
+
+.sad {
+  background: #3b82f6;
+}
+
+.calm {
+  background: #8b5cf6;
+}
+
+.stress {
+  background: #ef4444;
+}
+
+/* Small Tags */
+.small-tag {
+  background: #374151;
+  padding: 8px 15px;
+  border-radius: 20px;
+  margin-right: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+/* AI Suggestion Box */
+.ai-box {
+  background: #ddd6fe;
+  color: black;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/* Analytics Page */
+.analytics-card {
+  background: #1f2937;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.insight-card {
+  background: #ddd6fe;
+  color: black;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/* Profile Page */
+.profile-card {
+  background: #1f2937;
+  border-radius: 25px;
+  padding: 30px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Memory Cards */
+.memory-card {
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+/* Section spacing */
+.page-container {
+  width: 100%;
+  padding: 30px;
+  padding-bottom: 100px;
+}
+
+/* Headings */
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .emoji {
+    font-size: 28px;
+  }
+
+  .streak-days div {
+    width: 35px;
+    height: 35px;
+  }
+
+  .analytics-card {
+    margin-bottom: 20px;
+  }
+
+  .page-container {
+    padding: 20px;
+    padding-bottom: 100px;
+  }
+
+  .profile-img {
+    width: 90px;
+    height: 90px;
+  }
+}

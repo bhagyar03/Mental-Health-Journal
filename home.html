@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Home</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body class="main-body">
+
+<div class="container py-4">
+
+    <div class="top-section mb-4">
+
+        <h2 id="greeting"></h2>
+
+        <p class="sub-text">
+            How are you feeling today?
+        </p>
+
+    </div>
+
+    <div class="card-box p-4 mb-4">
+
+        <h5 class="mb-4">Today's Mood</h5>
+
+        <div class="emoji-container">
+
+            <span class="emoji" onclick="selectMood(this)">😭</span>
+            <span class="emoji" onclick="selectMood(this)">😔</span>
+            <span class="emoji" onclick="selectMood(this)">😐</span>
+            <span class="emoji" onclick="selectMood(this)">😊</span>
+            <span class="emoji" onclick="selectMood(this)">😍</span>
+
+        </div>
+
+    </div>
+
+    <div class="card-box p-4 mb-4">
+
+        <h5>This Week's Streak</h5>
+
+        <div class="streak-days mt-3">
+
+            <div class="active-day">M</div>
+            <div class="active-day">T</div>
+            <div class="active-day">W</div>
+            <div class="active-day">T</div>
+            <div class="today-day">F</div>
+            <div>S</div>
+            <div>S</div>
+
+        </div>
+
+    </div>
+
+    <div class="card-box p-4 mb-5">
+
+        <div class="d-flex justify-content-between">
+
+            <h5>Yesterday's Note</h5>
+
+            <small>Thu, Mar 17</small>
+
+        </div>
+
+        <p class="mt-3">
+            "I felt a bit overwhelmed today but
+            taking a short walk really helped me feel better."
+        </p>
+
+    </div>
+
+</div>
+<div class="bottom-nav">
+
+    <a href="home.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+    </a>
+
+    <a href="journal.html">
+        <i class="fa-solid fa-book"></i>
+        <span>Journal</span>
+    </a>
+
+    <a href="analytics.html">
+        <i class="fa-solid fa-chart-column"></i>
+        <span>Analytics</span>
+    </a>
+
+    <a href="moments.html">
+        <i class="fa-solid fa-image"></i>
+        <span>Moments</span>
+    </a>
+
+    <a href="profile.html">
+        <i class="fa-solid fa-user"></i>
+        <span>Profile</span>
+    </a>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
